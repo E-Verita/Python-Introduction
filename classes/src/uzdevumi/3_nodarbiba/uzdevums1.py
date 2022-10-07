@@ -1,0 +1,5 @@
+x = int(input("Ievadi veselu skaitli x ==>"))
+y = int(input("Ievadi veselu skaitli y ==>"))
+print(f"Rezultāts 1: {(2+x)/(x*y)}")
+print(f"Rezultāts 2: {5*(x**3) - x**2 + 7*x - 6}")
+print(f"Rezultāts 3: {(x*y)**0.5}")
