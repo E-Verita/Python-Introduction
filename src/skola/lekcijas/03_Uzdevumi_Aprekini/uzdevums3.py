@@ -15,3 +15,5 @@ n = 3
 
 m, n = n, m
 print(f"m={m}, n={n}")
+z = 1
+y = 2
