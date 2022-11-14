@@ -5,7 +5,7 @@ high = 1000
 print(f"Please think of a number between {low} and {high}")
 guesses = 1
 
-while True:
+while low != high:
     guess = low + (high - low) // 2
     high_low = input(f"My guess is {guess}. Should i guess higher (h) or lower(l)? Enter c if guess was correct.")
     if high_low == "h":
@@ -18,5 +18,7 @@ while True:
     else:
         print("Please enter h, l or c")
     guesses += 1
-
+else:
+    print(f"You thought of number {low}")
+    print(f"I got it in {guesses} guesses.")
 
