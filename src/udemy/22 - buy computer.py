@@ -1,32 +1,24 @@
-available_parts = ["computer", "monitor", "keyboard", "mouse", "cables", "accessories"]
+available_parts = ["computer", "monitor", "keyboard", "mouse", "cables", "accessories", "external drive"]
 current_choice = "—"
+valid_choices = [str(i) for i in range(1, len(available_parts) + 1)]
 computer_parts = []
 
 while current_choice != "0":
-    if current_choice in available_parts:
-        print(f"Adding {current_choice}")
-        if current_choice == "1":
-            computer_parts.append("computer")
-        elif current_choice == "2":
-            computer_parts.append("monitor")
-        elif current_choice == "3":
-            computer_parts.append("keyboard")
-        elif current_choice == "4":
-            computer_parts.append("mouse")
-        elif current_choice == "5":
-            computer_parts.append("cables")
-        elif current_choice == "6":
-            computer_parts.append("accessories")
+    if current_choice in valid_choices:
+        index = int(current_choice) - 1
+        chosen_part = available_parts[index]
+        if chosen_part in computer_parts:
+            print(f"Removing {current_choice}")
+            computer_parts.remove(chosen_part)
+        else:
+            print(f"Adding {current_choice}")
+            computer_parts.append(chosen_part)
+        print(f"Your list now contains {computer_parts}")
 
     else:
         print("Please add options from list below:")
-        print("1: computer")
-        print("2: monitor")
-        print("3: keyboard")
-        print("4: mouse")
-        print("5: cables")
-        print("6: accessories")
-        print("0: to finish")
+        for index, item in enumerate(available_parts):
+            print(f"{index + 1}: {item}")
 
     current_choice = input()
 
