@@ -1,6 +1,6 @@
-def multiply(a, b):
+def multiply(x: float, y: float) -> float:
     """
-Multiply 2 numbers.
+    Multiply 2 numbers.
 
     Although this function is intended to multiply 2 numbers,
     you can also use it to multiply a sequence.  If you pass
@@ -10,8 +10,8 @@ Multiply 2 numbers.
     :param x: The first number to multiply.
     :param y: The number to multiply `x` by.
     :return: The product of `x` and `y`.
-"""
-    return a * b
+    """
+    return x * y
 
 
 answer = multiply(10, 5)
@@ -21,7 +21,7 @@ for val in range(1, 11):
     print(f"{val} x 10 = {multiply(val, 10)}")
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
     """
     Check if a string is a palindrome.
 
@@ -33,7 +33,7 @@ def is_palindrome(string):
     return string[::-1].casefold() == string.casefold()
 
 
-def is_sentence_palindrome(sentence):
+def is_sentence_palindrome(sentence: str) -> bool:
     """
     Check if a sentence is a palindrome.
 
@@ -43,7 +43,7 @@ def is_sentence_palindrome(sentence):
     :param sentence: The sentence to check.
     :return: True if `sentence` is a palindrome, False otherwise.
     """
-    string = "".join([el for el in sentence if el.isalnum() == True])
+    string = "".join([el for el in sentence if el.isalnum()])
     return is_palindrome(string)
 
 
@@ -59,5 +59,7 @@ if is_palindrome(word.casefold()):
 else:
     print(f"'{word}' is not a palindorme")
 
-answer = multiply(18,3)
+answer = multiply(18, 3)
 print(answer)
+
+p = is_palindrome("test")
