@@ -29,3 +29,6 @@ if is_palindrome(word.casefold()):
     print(f"'{word}' is a palindorme")
 else:
     print(f"'{word}' is not a palindorme")
+
+answer = multiply(18,3)
+print(answer)
