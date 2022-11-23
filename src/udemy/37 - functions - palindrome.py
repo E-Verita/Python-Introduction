@@ -20,6 +20,19 @@ print(answer)
 for val in range(1, 11):
     print(f"{val} x 10 = {multiply(val, 10)}")
 
+def factorial(number: int) -> int:
+    """
+    will return the factorial of the number passed as its argument.
+    """
+    result = 1
+    for el in range(1, number + 1):
+        result *= el
+    return result
+
+
+for i in range(0, 36):
+    print(f"{i}    i={factorial(i)}")
+
 
 def is_palindrome(string: str) -> bool:
     """
